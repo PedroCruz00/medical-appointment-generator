@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Citas Médicas</h1>
+    </header>
+    <main>
+    <section class="querys-appointment card">
+        <div class="card__content">
+            <div class="title">
+                <h2>Crear Cita</h2>
+            </div>
+            <div class="content">
+                <form id="create-appointment-form">
+                    <label for="cc">Cédula (Paciente):</label>
+                    <input type="text" id="cc" name="cc" required>
+
+                    <br><br>
+                    <label for="date">Fecha de la Cita:</label>
+                    <input type="date" id="date" name="date" required>
+                    <br><br>
+                    <label for="authorization" class="custom-file-upload">Copia de Autorización (foto - archivo):</label>
+                    <input type="file" id="authorization" name="authorization" required>
+                    <br><br>
+                    <button type="submit">Crear Cita</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="querys-appointment card">
+        <div class="card__content">
+            <div class="title">
+                <h2>Consultar Citas</h2>
+            </div>
+            <div class="content">
+                <form id="consult-appointments-form">
+                    <label for="start-date">Fecha de Inicio:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                    <br><br>
+                    <label for="end-date">Fecha de Fin:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                    <br><br>
+                    <button type="submit">Consultar Citas</button>
+                </form>
+                <div id="appointments-results"></div>
+            </div>
+        </div>
+    </section>
+    <section class="querys-appointment card">
+        <div class="card__content">
+            <div class="title">
+                <h2>Cancelar Cita</h2>
+            </div>
+            <div class="content">
+
+                <form id="cancel-appointment-form">
+                    <label for="appointment-code">Código de Cita:</label>
+                    <input type="text" id="appointment-code" name="appointment-code" required><br><br>
+                    <button type="submit">Cancelar Cita</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
